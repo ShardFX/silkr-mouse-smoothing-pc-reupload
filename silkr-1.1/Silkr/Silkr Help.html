@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Silkr Help</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            font-family: Arial;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            width: 120px;
+            left: 0;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 3px 5px 3px 5px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #679cbf;
+            color: #fff;
+            text-align: center;
+            cursor: default;
+        }
+
+        .item a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        #top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #content {
+            position: absolute;
+            left: 120px;
+            padding: 5px 5px;
+            height: 100%;
+            width: auto;
+            font-family: 'Times New Roman';
+        }
+
+        #signed {
+            text-align: right;
+            margin-right: 50px;
+        }
+    </style>
+    <script type="text/javascript">
+        function show(shown) {
+            hideAll();
+            document.getElementById(shown).style.display = 'block';
+            window.scrollTo(0, 0);
+            return false;
+        }
+        function hideAll() {
+            document.getElementById('information').style.display = 'none';
+            document.getElementById('mainwindow').style.display = 'none';
+            document.getElementById('settings').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('cursor').style.display = 'none';
+            document.getElementById('tablet').style.display = 'none';
+            document.getElementById('hotkeys').style.display = 'none';
+            document.getElementById('troubleshooting').style.display = 'none';
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home"><strong>Silkr</strong></a></li>
+        <li class="item"><a href="#" onclick="return show('information');">Information</a></li>
+        <li class="item"><a href="#" onclick="return show('mainwindow');">Main Window</a></li>
+        <li class="item"><a href="#" onclick="return show('settings');">Settings</a></li>
+        <li class="item"><a href="#" onclick="return show('overlay');">&nbsp;&nbsp;&bull; Overlay</a></li>
+        <li class="item"><a href="#" onclick="return show('cursor');">&nbsp;&nbsp;&bull; Cursor</a></li>
+        <li class="item"><a href="#" onclick="return show('tablet');">&nbsp;&nbsp;&bull; Tablet</a></li>
+        <li class="item"><a href="#" onclick="return show('hotkeys');">&nbsp;&nbsp;&bull; Hotkeys</a></li>
+        <li class="item"><a href="#" onclick="return show('troubleshooting');">Troubleshooting</a></li>
+    </ul>
+    <div id="top"></div>
+    <div id="content">
+        <div id="information">
+            <h3>Information</h3>
+            <p>.</p>
+            <h4>.</h4>
+            <p>.</p>
+            <p><i>Troubleshooting</i> section.</p>
+            <p>.</p>
+            <p id="signed">A. Haikal Ruslan</p>
+        </div>
+        <div id="mainwindow" style="display:none">
+            <h3>Main Window</h3>
+            <p>.</p>
+            <p>
+                <a href="#mwfilemenu">File Menu</a><br />
+                <a href="#mwsmoothingonoff">Smoothing On/Off</a><br />
+                <a href="#mwcycledisplay">Cycle Display</a><br />
+                <a href="#mweyedropper">Eyedropper</a><br />
+                <a href="#mwstrength">Strength</a><br />
+                <a href="#mwinterpolation">Interpolation</a><br />
+                <a href="#mwmanualinterpolation">Manual Interpolation</a><br />
+                <a href="#mwstayontop">Stay On Top</a><br />
+                <a href="#mwsmoothondraw">Smooth On Draw</a><br />
+                <a href="#mwtabletmode">Tablet Mode</a><br />
+            </p>
+            <h4 id="mwfilemenu">File Menu</h4>
+            <p>
+                &bull; File<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Save Config - Saves all settings to the <em>Silkr.config</em> file in the same directory. This file will be created if it does not exist. This option is disabled while the Settings window is open.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Restore Defaults - Restores all settings to their defaults. This option is disabled while the Settings window is open.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Exit - Exits the application.<br />
+                &bull; Settings - Opens the Settings window.<br />
+                &bull; Help - Opens the Help window.<br />
+                &bull;About - Opens the About window.
+            </p>
+            <h4 id="mwsmoothingonoff">Smoothing On Off</h4>
+            <p>Turns the smoothing feature on or off.</p>
+            <h4 id="mwcycledisplay">Cycle Display</h4>
+            <p></p>
+            <h4 id="mweyedropper">Eyedropper</h4>
+            <p>.</p>
+            <h4 id="mwstrength">Strength</h4>
+            <p>.</p>
+            <h4 id="mwinterpolation">Interpolation</h4>
+            <p>.</p>
+            <h4 id="mwmanualinterpolation">Manual Interpolation</h4>
+            <p>.</p>
+            <h4 id="mwstayontop">Stay On Top</h4>
+            <p>Toggles if the Main Window should stay on top of every window.</p>
+            <h4 id="mwsmoothondraw">Smooth On Draw</h4>
+            <p>Attempts to smooth only when the mouse or pen tablet is down.</p>
+            <h4 id="mwtabletmode">Tablet Mode</h4>
+            <p>.</p>
+        </div>
+        <div id="settings" style="display:none">
+            <h3>Settings</h3>
+            <p>.</p>
+        </div>
+        <div id="overlay" style="display:none">
+            <h3>Overlay</h3>
+            <p>Advanced overlay settings.</p>
+            <p>
+                <a href="#odisableoverlay">Disable Overlay</a><br />
+                <a href="#oallscreens">All Screens (Experimental)</a><br />
+                <a href="#omanualoverlayoverride">Manual Overlay Override</a><br />
+                <a href="#ooverlaysize">Overlay Size</a><br />
+                <a href="#ooverlayposition">Overlay Position</a><br />
+            </p>
+            <h4 id="odisableoverlay">Disable Overlay</h4>
+            <p>Disables or enables the virtual cursor's overlay. Disabling the overlay will increase performance.</p>
+            <h4 id="oallscreens">All Screens (Experimental)</h4>
+            <p>Attempts to extend the virtual cursor's overlay to all screens if applicable. This is very performance heavy.</p>
+            <h4 id="omanualoverlayoverride">Manual Overlay Override</h4>
+            <p>Enables the overlay override text inputs and overrides the location and size of the overlay. Overriding the overlay to occupy a smaller size will increase performance.</p>
+            <h4 id="ooverlaysize">Overlay Size</h4>
+            <p>Sets the overlay's width in terms of x pixels and height in terms of y pixels.</p>
+            <h4 id="ooverlayposition">Overlay Position</h4>
+            <p>Sets the overlay's position in terms of x and y in pixels.</p>
+        </div>
+        <div id="cursor" style="display:none">
+            <h3>Cursor</h3>
+            <p>Advanced cursor settings.</p>
+            <p>
+                <a href="#cdisablecatchup">Disable Catch Up</a><br />
+                <a href="#csnaptocursor">Snap To Cursor (Smooth On Draw)</a><br />
+                <a href="#ccursorgraphic">Cursor Graphic</a><br />
+                <a href="#cmaincolor">Main Color</a><br />
+                <a href="#cfillcolor">Fill Color</a><br />
+            </p>
+            <h4 id="cdisablecatchup">Disable Catch Up</h4>
+            <p>.</p>
+            <h4 id="csnaptocursor">Snap To Cursor (Smooth On Draw)</h4>
+            <p>.</p>
+            <h4 id="ccursorgraphic">Cursor Graphic</h4>
+            <p>Choose from six different graphics to represent the virtual cursor.</p>
+            <h4 id="cmaincolor">Main Color</h4>
+            <p>Mimics the eyedropper functionality and changes the virtual cursor's main color.</p>
+            <h4 id="cfillcolor">Fill Color</h4>
+            <p>Changes the virtual cursor's filling color when applicable.</p>
+        </div>
+        <div id="tablet" style="display:none">
+            <h3>Tablet</h3>
+            <p>Advanced tablet settings.</p>
+            <p>
+                <a href="#tdisableautodetection">Disable Auto Detection</a><br />
+                <a href="#ttolerance">Tolerance</a><br />
+                <a href="#ttabletoffsetoverride">Tablet Offset Override</a><br />
+            </p>
+            <h4 id="tdisableautodetection">Disable Auto Detection</h4>
+            <p>.</p>
+            <h4 id="ttolerance">Tolerance</h4>
+            <p>t.</p>
+            <h4 id="ttabletoffsetoverride">Tablet Offset Override</h4>
+            <p>.</p>
+        </div>
+        <div id="hotkeys" style="display:none">
+            <h3>Hotkeys</h3>
+            <p>.</p>
+            <p>Hotkeys can be set for the following functions:</p>
+            <p>
+                &bull; <strong>Smooth On/Off</strong> - Toggles smoothing on or off.<br />
+                &bull; <strong>Overlay On/</strong> - Toggles the overlay on or off.<br />
+                &bull; <strong>Toggle Display</strong> - Cycles through the available monitors to display the overlay on.<br />
+                &bull; <strong>Tablet Mode</strong> - Manually toggles Tablet Mode when Disable Auto Detection is off.<br />
+                &bull; <strong>Strength Up</strong> - Increases the smoothing strength by 10 in increments of 10.<br />
+                &bull; <strong>Strength Down</strong> - Decreases the smoothing strength by 10 in increments of 10.
+            </p>
+        </div>
+        <div id="troubleshooting" style="display:none">
+            <h3>Troubleshooting</h3>
+            <p>There are bound to be issues. Hopefully this might cover some of them.</p>
+            <h4>Minimum System and Hardware Requirements</h4>
+            <p>
+                Windows 8.1, Windows 10<br />
+                1 GB RAM<br />
+                2.0 GHz Processor<br />
+                Microsoft .NET Framework 4.5.2 or higher<br />
+            </p>
+            <p>
+                <a href="#t1">Tablet cursor jumps between itself and virtual cursor</a><br />
+                <a href="#t2">How to get this to work on Photoshop</a><br />
+                <a href="#t3">Mouse doesn't finish drawing while left click is down</a><br />
+                <a href="#t4">Tablet pen is drawing elsewhere</a><br />
+                <a href="#t5">How to improve performance</a><br />
+                <a href="#t6">How to load a configuration file</a><br />
+                <a href="#t7">Configuration file won't load</a><br />
+            </p>
+            <h4 id="t1">Tablet cursor jumps between itself and virtual cursor</h4>
+            <p>You will need to disable Windows/Microsoft Ink in your tablet driver's settings. Most if not all Wacom tablets should have this option as a checkbox when setting up program profiles.</p>
+            <h4 id="t2">How to get this to work on Photoshop</h4>
+            <p>
+                1. Disable Windows/Microsoft Ink for Photoshop in your tablet driver/profiler<br />
+                2. Navigate to your Photoshop settings folder. It should be located at:<br />
+                <em>C:\Users\YOURUSERNAME\AppData\Roaming\ Adobe\Adobe Photoshop CC\Adobe Photoshop CC Settings\</em><br />
+                3. Locate the settings file: <em>PSUserConfig.txt</em><br />
+                4. If it does not exist, create it.<br />
+                5. Add the following line inside that file:<br />
+                <em>UseSystemStylus 0</em><br /><br />
+                This will enable Photoshop's legacy handling for tablets.
+            </p>
+            <h4 id="t3"></h4>
+            <p>Under <em>Settings -> Cursor</em> check Disable Catch Up.</p>
+            <h4 id="t4">Tablet pen is drawing elsewhere</h4>
+            <p>Under <em>Settings -> Tablet</em> check Tablet Offset Override. You can offset the virtual cursor and real cursor with x and y in terms of pixels.</p>
+            <h4 id="t5">How to improve performance</h4>
+            <p>.</p>
+            <h4 id="t6">How to load a configuration file</h4>
+            <p>On startup, Silkr will load <em>Silkr.config</em> if it's found in the same directory.</p>
+            <h4 id="t7">Configuration file won't load</h4>
+            <p><em>Silkr.config</em> .</p>
+        </div>
+    </div>
+</body>
+</html>
